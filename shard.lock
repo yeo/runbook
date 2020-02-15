@@ -1,0 +1,34 @@
+version: 1.0
+shards:
+  awscr-signer:
+    github: taylorfinnell/awscr-signer
+    version: 0.6.0
+
+  crynamo:
+    github: v9n/crynamo
+    commit: 1ae903dfb8d4e710ede61d52b776450c7d77c857
+
+  exception_page:
+    github: crystal-loot/exception_page
+    version: 0.1.2
+
+  kemal:
+    github: kemalcr/kemal
+    commit: 4d6fb0614f29aa02254913dc6ed69b0cb148fa81
+
+  kemal-session:
+    github: kemalcr/kemal-session
+    version: 0.12.0
+
+  kilt:
+    github: jeromegn/kilt
+    version: 0.4.0
+
+  markd:
+    github: icyleaf/markd
+    version: 0.2.0
+
+  radix:
+    github: luislavena/radix
+    version: 0.3.9
+

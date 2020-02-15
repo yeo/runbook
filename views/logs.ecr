@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="columns">
+    <% if logs %>
+      <% logs.each do |log| %>
+        <div class="column col-12">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                    <span class="chip"><%= log.author %></span> execute at <%= log.runAt %>
+                </div>
+              </div>
+              <div class="card-body">
+                <pre class="code" data-lang="shell"><code><%= log.output %></code></pre>
+              </div>
+            </div>
+        </div>
+      <% end %>
+    <% else %>
+        No job run yet!
+    <% end %>
+  </div>
+</div>

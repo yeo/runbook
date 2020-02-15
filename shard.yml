@@ -1,0 +1,25 @@
+name: runbook
+version: 0.1.0
+
+authors:
+  - Vinh <vinh@getopty.com>
+
+targets:
+  runbook:
+    main: src/runbook.cr
+
+crystal: 0.32.0
+
+license: MIT
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+    branch: master
+  kemal-session:
+    github: kemalcr/kemal-session
+  crynamo:
+    github: v9n/crynamo
+    branch: master
+  markd:
+    github: icyleaf/markd

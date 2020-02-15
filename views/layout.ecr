@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Runbook</title>
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <script src="/js/js-yaml.min.js"></script>
+    <script src="/lib/codemirror.js"></script>
+    <script src="/mode/shell/shell.js"></script>
+    <link rel="stylesheet" href="/lib/codemirror.css">
+    <!-- This is an internal tool where user is our dev so use dev version -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <style>
+      .navbar {
+        padding: 10px 0 30px 0;
+        box-shadow: 0 2px 0 0 #f5f5f5;
+      }
+
+      .CodeMirror {
+        border: 1px solid #eee;
+        height: auto;
+      }
+
+      #app-root {
+        margin-top: 1em;
+        }
+   </style>
+  </head>
+
+  <body>
+    <div class="container grid-lg">
+      <header class="navbar">
+        <section class="navbar-section">
+          <a href="/" class="h1 btn btn-link">Runbook</a>
+        </section>
+
+        <section class="navbar-section">
+          <% if current_user %>
+            <h5><a href="//github.com/<%= current_user.login %>"><%= current_user.login %></a></h5>
+          <% else %>
+            <a href="/oauth" class="btn btn-link">Login with Github</a>
+          <% end %>
+        </section>
+      </header>
+    </div>
+
+    <div id="app-root">
+      <div class="container grid-lg"><%= content %></div>
+    </div>
+  </body>
+</html>

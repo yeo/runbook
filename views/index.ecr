@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="columns">
+    <div class="column col-12">
+      <ul>
+      <% books.each do |book| %>
+        <li><a href="<%=book[:name]%>"><%= book[:title] %></a></li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
